@@ -1,23 +1,30 @@
+/*
+Caden Archer
+7/14/2023
+Name: Githug bug fixes 
+Discription: I made a clone of my prof code and fixed any errors and made it easier to know what is what by changing the names to be clear-er
+*/
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
-float average(int i1, int i2, int i3)
+float Average(int Int1, int Int2, int Int3) //Function to use three inputed numbers by the user to find the average
 {
-	return i1 + i2 + i3 / 3.0f;
+	return (Int1 + Int2 + Int3) / 3;//fixed this so it adds the numbers before diving it by 3
 }
 
 int main()
 {
-	int n1 =0 , n2 = 0, n3 = 0;
-	cout << "This program calculates the average of three numbers." << endl;
-	cout << "First number: "; cin >> n1;
-	cout << "Second number: "; cin >> n2;
-	cout << "Third number: "; cin >> n2;
+	int IntputInt, InputInt2, InputInt3; 
+	cout << "This program calculates the average of three numbers.\n";
+	cout << "First number: "; cin >> IntputInt;
+	cout << "Second number: "; cin >> InputInt2;
+	cout << "Third number: "; cin >> InputInt3;//changed the input int to three as it was set to two messing it up
 
-	float a = average(n1, n2, n3);
+	float AverageOfThreeNumbers = Average(IntputInt, InputInt2, InputInt3); //Float to grab the average number from the function
 
-	cout << setprecision(1) << fixed << "The average is " << a << endl;
+	cout << setprecision(1) << fixed << "The average is " << AverageOfThreeNumbers << endl;
 
 	return 0;
 }
